@@ -58,7 +58,7 @@ with col2:
 
 col1,col2 = st.columns(2)
 with col1:
-    height = st.number_input("Enter your Height in metres",min_value=140,max_value=220)
+    height = st.number_input("Enter your Height in centimetres",min_value=140,max_value=220)
 with col2:
     weight = st.number_input("Enter your weight in KG",min_value=45,max_value=140)
 
@@ -100,4 +100,4 @@ if maj_sur=="Yes":
 else:
     maj_sur = 0
 if st.button("Predict !!!"):
-    st.subheader("Predicted value")
+    st.subheader(f"Predicted value : {predict([[age,diab,bp,trans,dis,height,weight,aller,cancer,maj_sur]])}")
